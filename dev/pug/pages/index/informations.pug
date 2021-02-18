@@ -1,0 +1,49 @@
+section.s-information.s-light-bg
+    .container
+        .information
+            .information-item
+                .information-item__header
+                    h2.title-section Новости
+                .information-item__body
+                    .news-prev__wrapper
+                       a(href="").news-prev
+                            .news-prev__img(style="background-image:url('static/images/content/news/news-1/prev.jpg')")
+                            .news-prev__body
+                                span.news-prev__title Мы открылись!
+                                span.news-prev__date 01.05.2020
+                       a(href="").news-prev
+                        .news-prev__img(style="background-image:url('static/images/content/news/news-1/prev.jpg')")
+                        .news-prev__body
+                            span.news-prev__title В наличии появились новые сиропы
+                            span.news-prev__date 04.05.2020
+                .information-item__footer
+                    a(href="").information-item__link Все новости
+
+            .information-item
+                .information-item__header
+                    h2.title-section Отзывы
+                .information-item__body
+                    .review-prev
+                        p.review-prev__text Приемлемые цены. Заказ делать одно удовольствие, выбор свежего зернового кофе огромный.
+                        span.review-prev__author Оксана М.
+                    .review-prev
+                        p.review-prev__text Достаточно удобный и понятный сайт. Нормальные цены. Неплохой ассортимент.
+                        span.review-prev__author Антос С.
+                .information-item__footer
+                    a(href="").information-item__link Все отзывы
+            .information-item.information-item--wide
+                .information-item__header
+                    h2.title-section Бренды
+                .information-item__body
+                    .brands__wrapper
+                        .mobile-scroll-wrapper
+                            .mobile-scroll-inner
+                                ul.brands__list-small
+                                    each brand in [{img: 'bushido', name : 'Bushido'},{img: 'carraro', name : 'Carraro'},{img: 'jamaica', name : 'Jamaica'},{img: 'lavazza', name : 'Lavazza'},{img: 'molinari', name : 'Molinari'},{img: 'paulig', name : 'Paulig'}]
+                                        li.brands__item
+                                            a(href="").brand
+                                                img(src=`static/images/content/brands/${brand.img}.jpg`).brand__img
+                                                span.brand__name=brand.name
+                .information-item__footer
+                    a(href="brands.html").information-item__link Все бренды
+                    span.information-item__count (9)

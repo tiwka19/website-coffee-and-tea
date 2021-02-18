@@ -1,0 +1,29 @@
+extends template/main
+
+block variables
+    - var title = 'Кофе Бразилия'
+    - var pageClass = 'product-page'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="index.html") Главная
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="index.html") Каталог
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="index.html") Черный чай
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="index.html") Бразилия
+    section.s-product
+        .container
+            .product
+                .product__header
+                    include product/slider
+                    include product/info
+                .product__body
+                    include product/details/tab1
+    include pages/index/advantages
+    include product/goods
+    include category/content

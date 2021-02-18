@@ -1,0 +1,95 @@
+.filter__body
+    .filter__block
+        span.filter__title Подкатегории
+        ul.filter-list
+            each link in ['Пуэр','Черный чай','Зелёный чай','Фруктовый чай','Травяной чай','Улун']
+                li.filter-list__item
+                    a(href="").filter-list__link=link
+    .filter__block
+        span.filter__title Подбор параметров
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Пол
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Мужской
+                        li.select-list__item Женский
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Производитель
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Puky
+                        li.select-list__item Micro
+                        li.select-list__item Hudora
+                        li.select-list__item Strider
+                        li.select-list__item Scool
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Вкус
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Сладковатый
+                        li.select-list__item Мягкий
+                        li.select-list__item Необычный
+                        li.select-list__item Легкость
+                        li.select-list__item Насыщенность
+                        li.select-list__item Молочный
+                        li.select-list__item Терпкий
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Аромат
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Легкий
+                        li.select-list__item Древесный
+                        li.select-list__item Цветочный
+                        li.select-list__item Пряный
+                        li.select-list__item Насыщенный
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Ценовая категория
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Дешевая
+                        li.select-list__item Средняя
+                        li.select-list__item Выше среднего
+                        li.select-list__item Премиум
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Свойства
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Очищающий
+                        li.select-list__item Бодрящий
+                        li.select-list__item Успокаивающий
+                        li.select-list__item Восстанавливающий
+        .filter__row
+            .select
+                .select__header
+                    span.select__current Другие параметры
+                    +icon('arrow-down','select__icon')
+                .select__body
+                    ul.select-list
+                        li.select-list__item Нравится женщинам
+                        li.select-list__item Нравится мужчинам
+                        li.select-list__item Полезный
+                        li.select-list__item Легко заваривается
+                        li.select-list__item Крепкий
+                        li.select-list__item С кусочками фруктов
+
+        .filter__buttons
+            button.btn.btn--transparent-grey Сброс
+            button.btn.btn--bg-orange Подбор

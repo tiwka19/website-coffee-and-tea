@@ -1,0 +1,28 @@
+@import "hits";
+
+.tab {
+  display: none;
+  &.tab {
+    &--active {
+      display: block;
+      animation: tab linear .7 forwards;
+    }
+  }
+}
+.tabs {
+  &-navigation {
+    &__item{
+      cursor: pointer;
+      min-width: 150px;
+      white-space: nowrap;
+    }
+  }
+}
+@keyframes tab {
+ 0% {
+   opacity: 0;
+ }
+  100% {
+    opacity: 1;
+  }
+}

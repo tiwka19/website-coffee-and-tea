@@ -1,0 +1,84 @@
+extends template/main
+
+block variables
+    - var title = 'Главная страница'
+    - var pageClass = 'static-page'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link Главная
+                li.breadcrumbs__item
+                    span.breadcrumbs__current О компании
+    section.s-static-page
+        .container
+            h1.title-page О компании
+            .content-block
+
+                h2.title-section Наш ассортимент
+                p.text В каталог не попадают «случайные» товары. Мы сотрудничаем с известными во всем мире производителями, тщательно анализируем рынок и выставляем на продажу Чай, кофе и различные сладости, завоевавшие положительные отклики у покупателей.
+                h3.title-small Ассортимент кофе :
+                .content-block__row
+                    .content-block__col Кофе в зёрнах
+                        ul
+                            li Lavazza (Италия)
+                            li Paulig (Финляндия)
+                            li Jardin (Швейцария)
+                            li Carraro (Италия)
+                    .content-block__col Растворимый
+                        ul
+                            li EGOISTE
+                            li Carte Noire
+                            li Bushido
+                            li Nescafe
+                    .content-block__col Молотый
+                        ul
+                            li Illy (Италия)
+                            li Kimbo (Италия)
+                            li Malongo (Франция)
+                            li Jacobs (Германия)
+                h3.title-small Ассортимент чая :
+                .content-block__row
+                    .content-block__col Черный чай
+                        ul
+                            li Lavazza (Италия)
+                            li Paulig (Финляндия)
+                            li Jardin (Швейцария)
+                            li Carraro (Италия)
+                    .content-block__col Зеленый чай
+                        ul
+                            li EGOISTE
+                            li Carte Noire
+                            li Bushido
+                            li Nescafe
+                    .content-block__col Травяной чай
+                        ul
+                            li Illy (Италия)
+                            li Kimbo (Италия)
+                            li Malongo (Франция)
+                            li Jacobs (Германия)
+
+
+
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur assumenda atque consectetur consequatur dignissimos dolore eaque id laudantium maiores minima molestias nisi porro quasi quis, ratione sed vitae. Animi architecto assumenda atque cumque delectus dolor earum eius, eos incidunt magnam, magni necessitatibus, neque non provident ratione totam velit. Ab eaque, eos laborum nobis quisquam voluptate? Dolorem excepturi illum nulla pariatur quaerat, quibusdam quidem veniam? Ab accusamus ad atque, aut beatae consectetur debitis deleniti dignissimos dolor exercitationem inventore iusto molestiae, nihil officiis perferendis praesentium, quod reiciendis repellendus sequi sit ullam ut voluptas!
+                h4.title-small Как с нами связаться?
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum deleniti, facilis mollitia vitae voluptate. Deserunt dicta dolor itaque nam quidem! Aperiam, blanditiis culpa est expedita facilis nam necessitatibus omnis, perferendis possimus quas quibusdam quo ratione, suscipit tempora vitae! Dolore fuga id laudantium obcaecati qui quod velit voluptates? A accusamus adipisci corporis dignissimos dolores ipsa maiores odio placeat praesentium quia rem, saepe sit tempora temporibus totam. Blanditiis deleniti illo impedit incidunt magnam maxime nam, nihil quaerat quibusdam quod repellendus sapiente tempore voluptates. Aperiam, aspernatur doloribus ducimus eveniet explicabo nemo placeat porro voluptatum!
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet aspernatur autem corporis, cum dolor ea earum eos est facilis in, iste libero neque optio praesentium repellat rerum similique soluta tempora ullam?
+                    b Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eos nemo repellat.
+                .content-block__row
+                    .content-block__col
+                        h4.title-small Сертификаты
+                        img(src="https://via.placeholder.com/255X370", alt="Сертификат").content-block__img
+                    .content-block__col
+                        h4.title-small Юридические данные
+                        ul.no-dots
+                            li Юридические данные
+                            li HD COFFEE
+                            li ИНН : 7723485416
+                            li Юридический адресс : 204333, г.Калининград, ул.Куйбышева, д.90А
+    include pages/index/advantages
+
+
+

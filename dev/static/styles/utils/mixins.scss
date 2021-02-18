@@ -1,0 +1,80 @@
+@mixin box($width,$height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+$units: 1px !default;
+@mixin screen($res-first, $res-last: $res-first) {
+  @if $res-first == $res-last {
+    @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
+      @content;
+    }
+  }
+  @else if $res-first < $res-last {
+    @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
+      @content;
+    }
+  }
+}
+@mixin min-screen($res) {
+  @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
+    @content;
+  }
+}
+@mixin desktop(){
+  @media screen and (max-width: 1139px){
+    @content;
+  }
+}
+
+@mixin laptops(){
+  @media screen and (max-width: 992px){
+    @content;
+  }
+}
+
+@mixin tablets(){
+  @media screen and (max-width: 767px){
+    @content;
+  }
+}
+@mixin phones(){
+  @media screen and (max-width: 480px){
+    @content;
+  }
+}
+@mixin size($width, $height...){
+  @if (length($height) == 1){
+    height: $height;
+    width: $width;
+  }
+  @else {
+    height: $width;
+    width: $width;
+  }
+}
+
+@mixin vcenter($axis: 'both'){
+  position: absolute;
+  @if ($axis == 'both'){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @if ($axis == 'x'){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if ($axis == 'y'){
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@mixin shift($property: all, $duration: .3s, $ease: linear) {
+  transition: $property $duration $ease;
+}
